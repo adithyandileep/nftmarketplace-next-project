@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #2b2b2b;
+  --bg-lite: #3b3b3b;
+  --label-cap: #858584;
+  --text: #ffffff;
+  --call-to-action: #A259FF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+  background: white;
+  -ms-overflow-style: none;
+}
+
+.bg-litee {
+  background: var(--bg-lite);
+}
+
+.bg-pro {
+  background: var(--bg);
+}
+
+.text-pro {
+  color: var(--text);
+}
+
+.cap {
+  color: var(--label-cap);
+}
+
+.cta {
+  background: var(--call-to-action);
+}
+
+.t-cta {
+  color: var(--call-to-action);
+}
+
+.btn {
+  background: var(--call-to-action);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.btn-litee {
+  background: transparent;
+  color: var(--text);
+  display: inline-flex;
+  border: 2px solid var(--call-to-action);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
 }
